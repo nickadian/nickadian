@@ -8,7 +8,4 @@
 <a href="https://instagram.com/itsnickadian" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="itsnickadian" height="30" width="40" /></a>
 <a href="https://www.youtube.com/c/nickadian" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="nickadian" height="30" width="40" /></a>
 </p>
-
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=nickadian&show_icons=true&locale=en&layout=compact" alt="nickadian" /></p>
-
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=nickadian&" alt="nickadian" /></p>
