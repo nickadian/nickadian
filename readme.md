@@ -1,23 +1,4 @@
 <h1 align="center">Hi 👋, I'm Nick!!</h1>
-<h3 align="center">A driven automations dev from Canada</h3>
-
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=nickadian&label=Profile%20views&color=0e75b6&style=flat" alt="nickadian" /> </p>
-
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=nickadian" alt="nickadian" /></a> </p>
-
-- 🔭 My Full Time Job is [Solink](https://solink.com)
-
-- 🌱 I’m currently learning **Everything JS**
-
-- 🚤 My Side Hustle is [WetRentals](https://wetrentals.com)
-
-- 🤝 I’m looking for help with [WetRentals](https://wetrentals.com)
-
-- 💬 Ask me about **python, liquid, boat rentals**
-
-- 📫 How to reach me **nick@nickadian.com**
-
-- ⚡ Fun fact **Im a robot**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
