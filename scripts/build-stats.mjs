@@ -279,6 +279,6 @@ for (const theme of Object.keys(THEMES))
   writeFileSync(join(ROOT, 'profile', `stats-${theme}.svg`), card(theme, stats));
 writeFileSync(
   join(ROOT, 'profile', 'stats.json'),
-  `${JSON.stringify({ ...stats, generated: new Date().toISOString().slice(0, 10) }, null, 2)}\n`,
+  `${JSON.stringify(stats, null, 2)}\n`,
 );
 console.log(JSON.stringify(stats, null, 2));
