@@ -30,6 +30,8 @@ Do not edit the SVGs or `stats.json` by hand; the next run overwrites them.
 - **Contributions and streaks:** GitHub GraphQL through `gh`, every year since
   the account was created, private contributions included. A day with nothing
   ends a streak, except today, which is not over yet.
+- **Days worked:** days with at least one contribution among the last 365
+  finished days. Today joins the window only once it has a contribution.
 - **Lines of code:** `git log --all --no-merges --numstat` over every clone in
   `~/Documents/GitHub`, commits authored by the emails in `AUTHORS`, each sha
   counted once across clones and forks.

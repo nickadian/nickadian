@@ -100,7 +100,11 @@ function contributions() {
       run = { length: 0, start: null, end: null };
     }
   }
+  // Days with at least one contribution in the last 365 finished days (today
+  // joins the window only once it has a contribution, so it never counts against).
+  const finished = past.filter((d) => d.date !== today || d.count > 0).slice(-365);
   return {
+    year: { worked: finished.filter((d) => d.count > 0).length, days: finished.length },
     login: viewer.login,
     since: viewer.createdAt.slice(0, 10),
     total: past.reduce((sum, d) => sum + d.count, 0),
@@ -239,19 +243,21 @@ function card(theme, stats) {
     `<text x="${cx}" y="282" text-anchor="middle" font-size="13" fill="${c.muted}">${label}</text>`;
 
   const ring = 2 * Math.PI * 44;
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${stats.login}: ${n(stats.total)} contributions, ${stats.current.length} day streak, ${n(stats.loc.added)} lines added">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${stats.login}: ${n(stats.total)} contributions, ${stats.current.length} day streak, ${stats.year.worked} of ${stats.year.days} days worked, ${n(stats.loc.added)} lines added">
 <g ${font}>
 <rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="10" fill="${c.bg}" stroke="${c.border}"/>
-${column(140, n(stats.total), 'Total Contributions', `${day(stats.since, true)} - Present`)}
-<line x1="280" y1="36" x2="280" y2="176" stroke="${c.border}"/>
-<circle cx="420" cy="84" r="44" fill="none" stroke="${c.track}" stroke-width="6"/>
-<circle cx="420" cy="84" r="44" fill="none" stroke="${c.accent}" stroke-width="6" stroke-linecap="round" stroke-dasharray="${(ring * 0.92).toFixed(1)} ${ring.toFixed(1)}" transform="rotate(-76 420 84)"/>
-<path transform="translate(408 26) scale(1.5)" fill="${c.accent}" stroke="${c.bg}" stroke-width="2" paint-order="stroke" d="M8 16c3.3 0 6-2.5 6-5.8 0-2.3-1.2-4-2.6-5.5-.4 1.3-1 2-1.9 2.6C9.8 4.600 8.900 2.200 6.500 0c.2 2.300-.9 3.900-2.100 5.400C3.200 6.900 2 8.300 2 10.200 2 13.500 4.700 16 8 16z"/>
-<text x="420" y="96" text-anchor="middle" font-size="34" font-weight="700" fill="${c.text}">${n(stats.current.length)}</text>
-<text x="420" y="152" text-anchor="middle" font-size="15" font-weight="700" fill="${c.accent}">Current Streak</text>
-<text x="420" y="174" text-anchor="middle" font-size="12" fill="${c.muted}">${range(stats.current)}</text>
-<line x1="560" y1="36" x2="560" y2="176" stroke="${c.border}"/>
-${column(700, n(stats.longest.length), 'Longest Streak', range(stats.longest))}
+${column(135, n(stats.total), 'Total Contributions', `${day(stats.since, true)} - Present`)}
+<line x1="230" y1="36" x2="230" y2="176" stroke="${c.border}"/>
+<circle cx="325" cy="84" r="44" fill="none" stroke="${c.track}" stroke-width="6"/>
+<circle cx="325" cy="84" r="44" fill="none" stroke="${c.accent}" stroke-width="6" stroke-linecap="round" stroke-dasharray="${(ring * 0.92).toFixed(1)} ${ring.toFixed(1)}" transform="rotate(-76 325 84)"/>
+<path transform="translate(313 26) scale(1.5)" fill="${c.accent}" stroke="${c.bg}" stroke-width="2" paint-order="stroke" d="M8 16c3.3 0 6-2.5 6-5.8 0-2.3-1.2-4-2.6-5.5-.4 1.3-1 2-1.9 2.6C9.8 4.600 8.900 2.200 6.500 0c.2 2.300-.9 3.900-2.100 5.400C3.200 6.900 2 8.300 2 10.200 2 13.500 4.700 16 8 16z"/>
+<text x="325" y="96" text-anchor="middle" font-size="34" font-weight="700" fill="${c.text}">${n(stats.current.length)}</text>
+<text x="325" y="152" text-anchor="middle" font-size="15" font-weight="700" fill="${c.accent}">Current Streak</text>
+<text x="325" y="174" text-anchor="middle" font-size="12" fill="${c.muted}">${range(stats.current)}</text>
+<line x1="420" y1="36" x2="420" y2="176" stroke="${c.border}"/>
+${column(515, n(stats.longest.length), 'Longest Streak', range(stats.longest))}
+<line x1="610" y1="36" x2="610" y2="176" stroke="${c.border}"/>
+${column(705, `${n(stats.year.worked)}<tspan font-size="16" font-weight="400" fill="${c.muted}"> of ${n(stats.year.days)}</tspan>`, 'Days Worked', 'Last 365 days')}
 <line x1="40" y1="204" x2="${W - 40}" y2="204" stroke="${c.border}"/>
 ${tile(135, `+${n(stats.loc.added)}`, 'lines added', c.add)}
 ${tile(325, `-${n(stats.loc.removed)}`, 'lines removed', c.del)}
