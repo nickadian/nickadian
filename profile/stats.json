@@ -5,11 +5,11 @@
   },
   "login": "nickadian",
   "since": "2021-08-26",
-  "total": 30055,
+  "total": 30395,
   "current": {
-    "length": 74,
+    "length": 76,
     "start": "2026-09-07",
-    "end": "2026-11-19"
+    "end": "2026-11-21"
   },
   "longest": {
     "length": 92,
@@ -17,19 +17,19 @@
     "end": "2026-05-15"
   },
   "loc": {
-    "added": 9921626,
-    "removed": 2312086,
-    "commits": 13429,
+    "added": 9977872,
+    "removed": 2314692,
+    "commits": 13541,
     "repos": 24,
     "languages": {
-      "Markdown": 354520,
-      "Other": 105619,
-      "Shell": 17869,
-      "TypeScript": 8260948,
-      "SQL": 137860,
-      "JavaScript": 622946,
+      "Markdown": 355151,
+      "Other": 105626,
+      "Shell": 18164,
+      "TypeScript": 8309469,
+      "SQL": 137957,
+      "JavaScript": 629564,
       "HTML": 93873,
-      "CSS": 252908,
+      "CSS": 252985,
       "YAML": 37207,
       "Swift": 22790,
       "Java": 98,
