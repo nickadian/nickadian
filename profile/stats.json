@@ -1,15 +1,15 @@
 {
   "year": {
-    "worked": 353,
+    "worked": 356,
     "days": 365
   },
   "login": "nickadian",
   "since": "2021-08-26",
-  "total": 30395,
+  "total": 31746,
   "current": {
-    "length": 76,
+    "length": 81,
     "start": "2026-09-07",
-    "end": "2026-11-21"
+    "end": "2026-11-26"
   },
   "longest": {
     "length": 92,
@@ -17,19 +17,19 @@
     "end": "2026-05-15"
   },
   "loc": {
-    "added": 9977872,
-    "removed": 2314692,
-    "commits": 13541,
+    "added": 10270889,
+    "removed": 2338436,
+    "commits": 14031,
     "repos": 24,
     "languages": {
-      "Markdown": 355151,
-      "Other": 105626,
-      "Shell": 18164,
-      "TypeScript": 8309469,
-      "SQL": 137957,
-      "JavaScript": 629564,
+      "Markdown": 358554,
+      "Other": 105688,
+      "Shell": 18181,
+      "TypeScript": 8573556,
+      "SQL": 162073,
+      "JavaScript": 630333,
       "HTML": 93873,
-      "CSS": 252985,
+      "CSS": 253548,
       "YAML": 37207,
       "Swift": 22790,
       "Java": 98,
